@@ -88,7 +88,7 @@ void runcmd(struct cmd* cmd) {
                 close(p[0]);
                 close(p[1]);
                 runcmd(pcmd->left);
-            } else if (fork() == 0) {
+            } else {
                 close(0);
                 dup(p[0]);
                 close(p[0]);
